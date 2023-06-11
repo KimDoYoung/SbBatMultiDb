@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	
+	<property name="LOG_DIR" value="d:/logs"></property>
+	<property name="LOG_PREFIX" value="sbbatmultidb"></property>
+	
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyyMMdd HH:mm:ss.SSS} [%thread] %-5level [%logger{0}:%line] - %msg %n</pattern>
+        </encoder>
+    </appender>
+    
+	  <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+	    <file>${LOG_DIR}/${LOG_PREFIX}.log</file>
+	    <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+	      <Pattern>%d{yyyy-MM-dd HH:mm:ss}- %-5level - %msg%n</Pattern>
+	    </encoder>
+	    
+	    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+	      <fileNamePattern>${LOG_DIR}/${LOG_PREFIX}.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+	      <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+	        <maxFileSize>10MB</maxFileSize>
+	      </timeBasedFileNamingAndTriggeringPolicy>
+	    </rollingPolicy>
+	  </appender>    
+    
+      <logger name="kr.co.kalpa.batch.multi.sbbatmultidb" level="DEBUG"/>
+    
+      <logger name="jdbc" level="OFF"/>
+
+	  <!-- SQL 로그인쇄 -->	
+	  <logger name="jdbc.sqlonly" level="OFF"/>	
+	  <logger name="jdbc.sqltiming" level="DEBUG"/>
+	  <logger name="jdbc.audit" level="OFF"/>
+	  <logger name="jdbc.resultset" level="OFF"/>
+	  <logger name="jdbc.resultsettable" level="DEBUG"/>
+	  <logger name="jdbc.connection" level="OFF"/>
+    
+    <root level="debug">
+        <!-- appender-ref ref="FILE" /-->
+        <appender-ref ref="CONSOLE" />
+    </root> 
+</configuration>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd" >
+<configuration>
+    <!--mapper에서 매칭할 parmeter Type 별칭 설정-->
+    <typeAliases>
+        <typeAlias type="kr.co.kalpa.batch.multi.sbbatmultidb.model.DesWords" alias="DesWords"/>
+        <typeAlias type="kr.co.kalpa.batch.multi.sbbatmultidb.model.SrcWords" alias="SrcWords"/>
+    </typeAliases>
+
+
+<!--    <environments default="development">-->
+
+<!--        &lt;!&ndash; environment id를 구분하여 연결할 DB를 여려개 구성할 수 도 있음 &ndash;&gt;-->
+<!--        <environment id="development">-->
+<!--            <transactionManager type="JDBC"/>-->
+<!--            <dataSource type="POOLED">-->
+<!--                <property name="driver" value="oracle.jdbc.driver.OracleDriver"/>-->
+<!--                <property name="url" value="jdbc:oracle:thin:@localhost:1521:xe"/>-->
+<!--                <property name="username" value="mybatis"/>-->
+<!--                <property name="password" value="mybatis"/>-->
+<!--            </dataSource>-->
+<!--        </environment>-->
+<!--        <environment id="development">-->
+<!--            <transactionManager type="JDBC"/>-->
+<!--            <dataSource type="POOLED">-->
+<!--                <property name="driver" value="oracle.jdbc.driver.OracleDriver"/>-->
+<!--                <property name="url" value="jdbc:oracle:thin:@localhost:1521:xe"/>-->
+<!--                <property name="username" value="mybatis"/>-->
+<!--                <property name="password" value="mybatis"/>-->
+<!--            </dataSource>-->
+<!--        </environment>-->
+<!--        -->
+<!--    </environments>-->
+
+</configuration>
