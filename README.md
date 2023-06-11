@@ -7,7 +7,7 @@
 2. 2개의 datasource
 3. spring boot + spring batch
 4. mybatis 사용 
-   -  
+   -  MyBatisBatchItemWriter, MyBatisCursorItemReader 사용
 5. command line argument 지원
 
 ## packages
