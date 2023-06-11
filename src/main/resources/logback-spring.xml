@@ -24,7 +24,7 @@
 	    </rollingPolicy>
 	  </appender>    
     
-      <logger name="kr.co.kalpa.batch.multi.sbbatmultidb" level="DEBUG"/>
+      <logger name="kr.co.kalpa.batch" level="DEBUG"/>
     
       <logger name="jdbc" level="OFF"/>
 
